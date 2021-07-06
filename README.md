@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# HeroShop Web
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+HeroShop Web is a platform that allows vendors to publish your products to a ecommerce and interact with your customers througth a easy list of products and stories published by venders.
 
 ## Available Scripts
 
