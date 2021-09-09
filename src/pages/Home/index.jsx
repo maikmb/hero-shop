@@ -1,11 +1,11 @@
 import React from 'react';
 import { mock } from '../../config';
-import Products from '../../components/Products';
+import Catalog from '../../components/Catalog';
 
 export default function HomePage() {
     return (
         <section>
-            <Products products={mock.products} />
+            <Catalog products={mock.products} />
         </section>
     );
 

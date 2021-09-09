@@ -3,6 +3,8 @@ import styled, { keyframes } from 'styled-components'
 export const Container = styled.div`
   display: flex;
   flex-direction: row;
+  align-items: center;
+  height: 100%;
 `;
 
 const strokeDraw = keyframes`
@@ -21,6 +23,7 @@ export const Circle = styled.div`
   position: relative;
   width: 100px;
   height: 100px;
+  cursor: pointer;
 
   svg {
     fill: none;

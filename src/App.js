@@ -1,5 +1,5 @@
+import React from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import HomePage from './pages/Home';
 import Menu from './components/Menu';
 
 import './App.css';
@@ -9,20 +9,25 @@ import { Container } from '@material-ui/core';
 import { ThemeProvider } from 'styled-components';
 import { ThemeProvider as MuiThemeProvider, } from '@material-ui/core/styles';
 import Header from './components/Header';
+import StoryBoard from './components/StoryBoard';
+import { AppContextProvider } from './state/contexts/app-context';
 
-function App() {
+import Routes from './Routes';
+
+export default function App() {
   return (
     <MuiThemeProvider theme={theme}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <Container>
-          <Header />
-          <Menu />
-          <HomePage />
+          <AppContextProvider >
+            <StoryBoard />
+            <Header />
+            <Menu />
+            <Routes />
+          </AppContextProvider>
         </Container>
       </ThemeProvider>
     </MuiThemeProvider>
   );
 }
-
-export default App;

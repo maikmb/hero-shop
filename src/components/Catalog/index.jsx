@@ -1,8 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-import ProductItem from '../ProductItem';
+import CatalogItem from '../CatalogItem';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -16,9 +15,8 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function Products({ products }) {
-    const classes = useStyles();
-  
+export default function Catalog({ products }) {
+    const classes = useStyles();  
 
     const renderProducts = () => {
         return (
@@ -26,7 +24,7 @@ export default function Products({ products }) {
                 <Grid container spacing={3} >
                     {products.map(pdt => (
                         <Grid item xs={12} md={3} >
-                            <ProductItem product={pdt} />
+                            <CatalogItem product={pdt} />
                         </Grid>
                     ))}
                 </Grid>

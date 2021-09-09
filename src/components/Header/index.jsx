@@ -1,10 +1,18 @@
 import { Grid } from '@material-ui/core'
 import React from 'react'
+import { useCallback } from 'react'
 import { mock } from '../../config'
-import Stories from '../Stories'
-import { Brand, LogoImage, Nav , GridNav} from './styles'
+import { OPEN_STORY_BOARD } from '../../state/actions/app-actions'
+import { useAppState } from '../../state/contexts/app-context'
+import StoryList from '../StoryList'
+import { Brand, LogoImage, Nav, GridNav } from './styles'
 
 export default function Header() {
+    const { dispatch } = useAppState()
+
+    const showStory = (story) => {        
+        dispatch({ type: OPEN_STORY_BOARD, payload: story })
+    }
 
     return (
         <Nav>
@@ -13,7 +21,7 @@ export default function Header() {
                     <Brand>{mock.logoUrl ? <LogoImage src={mock.logoUrl} alt={mock.storeName} /> : mock.storeName}</Brand>
                 </Grid>
                 <Grid item xs={12} md={3} >
-                    <Stories stories={mock.lastStories} />
+                    <StoryList stories={mock.lastStories} onStoryClick={showStory} />
                 </Grid>
             </GridNav>
         </Nav>
