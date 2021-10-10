@@ -3,7 +3,6 @@ import { Container } from './styles'
 import Backdrop from '@material-ui/core/Backdrop';
 import Stories, { WithSeeMore } from 'react-insta-stories'
 import { makeStyles } from '@material-ui/core/styles';
-import { useState } from 'react';
 import { useAppState } from '../../state/contexts/app-context';
 import { CLOSE_STORY_BOARD, OPEN_STORIES } from '../../state/actions/app-actions';
 

@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+
+.MuiButton-root.MuiButton-contained.MuiButton-sizeLarge {
+  padding: 15px 22px;
+}
+.MuiButton-root {
+  font-weight: bold;
+  font-family: 'Josefin Sans';
+}

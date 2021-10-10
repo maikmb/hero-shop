@@ -20,14 +20,10 @@ const theme = createMuiTheme({
     palette: {
         type: 'light',
         primary: {
-            main: '#61dafb',
-            light: '#61dafb',
-            dark: '#21a1c4',
+            main: '#101010'
         },
         secondary: {
-            main: '#b5ecfb',
-            light: '#61dafb',
-            dark: '#21a1c4',
+            main: '#016FB9',            
         },
         error: {
             main: red.A400,
@@ -40,21 +36,21 @@ const theme = createMuiTheme({
         h3: secondaryFont,
         h4: secondaryFont,
         h5: secondaryFont,
-    }
-    //   overrides: {
-    //     MuiPaper: {
-    //       root: {
-    //         padding: '20px 10px',
-    //         margin: '10px',
-    //         backgroundColor: '#fff', // 5d737e
-    //       },
-    //     },
-    //     MuiButton: {
-    //       root: {
-    //         margin: '5px',
-    //       },
-    //     },
-    // },
+    },
+    overrides: {
+        MuiPaper: {
+            root: {
+                padding: '20px 10px',
+                margin: '10px',
+                backgroundColor: '#fff', // 5d737e
+            },
+        },
+        MuiButton: {
+            root: {
+                padding: '40px 0px',
+            },
+        },
+    },
 });
 
 export default theme;

@@ -10,7 +10,7 @@ import { Brand, LogoImage, Nav, GridNav } from './styles'
 export default function Header() {
     const { dispatch } = useAppState()
 
-    const showStory = (story) => {        
+    const showStory = (story) => {
         dispatch({ type: OPEN_STORY_BOARD, payload: story })
     }
 
@@ -18,7 +18,11 @@ export default function Header() {
         <Nav>
             <GridNav container spacing={3} >
                 <Grid item xs={12} md={3} >
-                    <Brand>{mock.logoUrl ? <LogoImage src={mock.logoUrl} alt={mock.storeName} /> : mock.storeName}</Brand>
+                    <Brand>
+                        <a href="/">
+                            {mock.logoUrl ? <LogoImage src={mock.logoUrl} alt={mock.storeName} /> : mock.storeName}
+                        </a>
+                    </Brand>
                 </Grid>
                 <Grid item xs={12} md={3} >
                     <StoryList stories={mock.lastStories} onStoryClick={showStory} />
