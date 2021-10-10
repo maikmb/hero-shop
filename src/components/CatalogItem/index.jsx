@@ -47,26 +47,7 @@ export default function CatalogItem({ product }) {
     const classes = useStyles();
 
     return (
-        <Card className={classes.root}>
-            {/* <CardHeader
-                avatar={
-                    <Avatar aria-label="recipe" className={classes.avatar}>
-                        R
-                    </Avatar>
-                }
-                action={
-                    <IconButton aria-label="settings">
-                        <MoreVertIcon />
-                    </IconButton>
-                }
-                title="Shrimp and Chorizo Paella"
-                subheader="September 14, 2016"
-            /> */}
-            {/* <CardMedia
-                    className={classes.media}
-                    image={product.img}
-                    title={product.title}
-                /> */}
+        <Card className={classes.root}>           
             <CardContent className={classes.content}>
                 <Carousel autoPlay={false} indicators={false} className={classes.media}>
                     {product.images.map(url =>
@@ -82,19 +63,6 @@ export default function CatalogItem({ product }) {
                     </div>
                 </CardActionArea>
             </CardContent>
-
-
-            {/* <CardActions disableSpacing>
-                <IconButton aria-label="add to favorites">
-                    <FavoriteIcon />
-                </IconButton>
-                <IconButton aria-label="share">
-                    <ShareIcon />
-                </IconButton>
-                <IconButton aria-label="Adicionar ao carrinho">
-                    <ShoppingCartIcon />
-                </IconButton>
-            </CardActions> */}
         </Card>
     );
 }

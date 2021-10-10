@@ -4,7 +4,7 @@ import { Nav, NavItem, NavOptions } from './styles'
 import { Badge, IconButton } from '@material-ui/core'
 import { ShoppingCart } from '@material-ui/icons'
 
-export default function Menu () {
+export default function Menu ({ countTotalItems }) {
   return (
     <Nav>
       <NavOptions>
@@ -14,7 +14,7 @@ export default function Menu () {
       </NavOptions>
       <NavOptions>
         <IconButton color='primary' aria-label='add to shopping cart'>
-          <Badge badgeContent={4} color='primary'>
+          <Badge badgeContent={countTotalItems} color='primary'>
             <ShoppingCart color='action' />
           </Badge>
         </IconButton>

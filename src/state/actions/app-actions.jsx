@@ -1,2 +1,3 @@
 export const OPEN_STORY_BOARD = 'OPEN_STORY_BOARD'
 export const CLOSE_STORY_BOARD = 'CLOSE_STORY_BOARD'
+export const ADD_CART_ITEM = 'ADD_CART_ITEM'
